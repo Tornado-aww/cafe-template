@@ -1448,21 +1448,87 @@
         font-size: 12px;
       }
 
+      .brand span {
+        max-width: 160px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      header .button {
+        min-height: 44px;
+        padding: 0 16px;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      .hero {
+        min-height: auto;
+        color: #fbf3e7;
+        background:
+          linear-gradient(180deg, rgba(20, 18, 12, 0.42), rgba(20, 18, 12, 0.86)),
+          url("https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=88") center/cover;
+      }
+
       h1 {
-        font-size: clamp(40px, 13vw, 64px);
+        max-width: 10.5ch;
+        color: #fff7e8;
+        font-size: clamp(42px, 12.6vw, 54px);
+        line-height: 0.98;
+        text-wrap: balance;
+      }
+
+      .hero h1 span {
+        display: block;
+        margin-top: 6px;
+        color: #ffd98e;
+        background: none;
+        background-clip: border-box;
+        -webkit-text-fill-color: currentColor;
+        animation: none;
       }
 
       .lead {
-        font-size: 17px;
+        max-width: 32ch;
+        color: rgba(255, 247, 232, 0.86);
+        font-size: 16px;
+        line-height: 1.55;
       }
 
       .hero-copy {
-        padding: 42px 18px 30px;
+        min-height: calc(100svh - 124px);
+        padding: clamp(48px, 12vh, 82px) 24px 92px;
+      }
+
+      .kicker {
+        color: #bdf2d3;
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 260px;
+      }
+
+      .hero-actions .button {
+        min-width: 0;
+        padding: 0 14px;
+        font-size: 16px;
+      }
+
+      .hero-actions .button:last-child {
+        justify-self: stretch;
+      }
+
+      .float-cta {
+        display: none !important;
       }
 
       .hero-visual {
-        min-height: 430px;
-        padding: 18px;
+        display: none;
       }
 
       .hero-card {
