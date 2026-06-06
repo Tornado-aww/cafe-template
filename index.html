@@ -1442,10 +1442,13 @@
     @media (max-width: 640px) {
       header {
         padding: 12px 16px;
+        background: rgba(255, 247, 232, 0.88);
       }
 
       .concept {
+        padding: 8px 18px;
         font-size: 12px;
+        line-height: 1.22;
       }
 
       .brand span {
@@ -1463,60 +1466,84 @@
       }
 
       .hero {
+        position: relative;
         min-height: auto;
         color: #fbf3e7;
         background:
-          linear-gradient(180deg, rgba(20, 18, 12, 0.42), rgba(20, 18, 12, 0.86)),
+          linear-gradient(180deg, rgba(11, 10, 7, 0.24) 0%, rgba(11, 10, 7, 0.56) 42%, rgba(11, 10, 7, 0.92) 100%),
           url("https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=88") center/cover;
       }
 
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        content: "";
+        background:
+          linear-gradient(90deg, rgba(249, 216, 147, 0.2), transparent 34%),
+          linear-gradient(180deg, transparent 54%, rgba(184, 71, 49, 0.22));
+      }
+
       h1 {
-        max-width: 10.5ch;
+        max-width: 11ch;
         color: #fff7e8;
-        font-size: clamp(42px, 12.6vw, 54px);
-        line-height: 0.98;
+        font-size: clamp(45px, 13.4vw, 59px);
+        line-height: 0.94;
+        text-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
         text-wrap: balance;
       }
 
       .hero h1 span {
         display: block;
-        margin-top: 6px;
-        color: #ffd98e;
-        background: none;
-        background-clip: border-box;
-        -webkit-text-fill-color: currentColor;
-        animation: none;
+        margin-top: 8px;
+        color: #ffd98e !important;
+        background: none !important;
+        background-image: none !important;
+        background-clip: border-box !important;
+        -webkit-background-clip: border-box !important;
+        -webkit-text-fill-color: #ffd98e !important;
+        animation: none !important;
       }
 
       .lead {
-        max-width: 32ch;
-        color: rgba(255, 247, 232, 0.86);
+        max-width: 30ch;
+        color: rgba(255, 247, 232, 0.9);
         font-size: 16px;
-        line-height: 1.55;
+        line-height: 1.58;
+        text-shadow: 0 12px 34px rgba(0, 0, 0, 0.38);
       }
 
       .hero-copy {
-        min-height: calc(100svh - 124px);
-        padding: clamp(48px, 12vh, 82px) 24px 92px;
+        position: relative;
+        min-height: calc(100svh - 116px);
+        justify-content: end;
+        padding: 38px 24px 34px;
       }
 
       .kicker {
+        max-width: 270px;
         color: #bdf2d3;
         font-size: 12px;
         line-height: 1.35;
+        text-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
       }
 
       .hero-actions {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
-        max-width: 260px;
+        width: min(100%, 300px);
+        max-width: 300px;
+        margin-top: 24px;
       }
 
       .hero-actions .button {
         min-width: 0;
+        min-height: 52px;
         padding: 0 14px;
-        font-size: 16px;
+        border-radius: 8px;
+        font-size: 17px;
+        box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
       }
 
       .hero-actions .button:last-child {
