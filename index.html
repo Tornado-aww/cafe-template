@@ -1611,6 +1611,65 @@
         min-height: 360px;
       }
 
+      .video-block {
+        padding: 44px 16px 56px;
+      }
+
+      .video-frame {
+        min-height: 560px;
+        border-radius: 8px;
+        box-shadow: 0 28px 70px rgba(32, 29, 24, 0.28);
+      }
+
+      .video-frame::before {
+        background:
+          linear-gradient(180deg, rgba(23, 23, 17, 0.12), rgba(23, 23, 17, 0.88)),
+          var(--video-shot, url("https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=88")) center/cover;
+      }
+
+      .video-status {
+        left: 18px;
+        top: 18px;
+        max-width: calc(100% - 36px);
+        font-size: 12px;
+      }
+
+      .video-frame .play {
+        left: auto;
+        right: 22px;
+        top: 42%;
+        width: 76px;
+        height: 76px;
+        transform: translateY(-50%);
+        animation: none;
+      }
+
+      .video-frame .play::before {
+        border-top-width: 11px;
+        border-bottom-width: 11px;
+        border-left-width: 18px;
+      }
+
+      .video-caption {
+        left: 22px;
+        right: 22px;
+        bottom: 28px;
+        display: block;
+      }
+
+      .video-caption h2 {
+        max-width: 270px;
+        font-size: 34px;
+        line-height: 1.02;
+      }
+
+      .video-caption p {
+        max-width: 280px;
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
       .info-row {
         display: block;
       }
